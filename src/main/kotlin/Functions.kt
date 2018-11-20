@@ -1,5 +1,3 @@
-import sun.security.provider.certpath.Vertex
-
 // Local functions
 
 fun outer() {

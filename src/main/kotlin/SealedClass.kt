@@ -9,3 +9,20 @@ fun eval(expr: Expr): Double = when(expr) {
     NotANumber -> Double.NaN
     // the `else` clause is not required because we've covered all the cases
 }
+
+// Nesting sealed classes can get messy
+sealed class LoginState {
+    sealed class SignedOut : LoginState() {
+        object HaveAccount : SignedOut()
+        object NewUser : SignedOut()
+    }
+
+    object SignedIn : LoginState()
+}
+
+fun ohNo(state: LoginState) {
+    val test= when (state) {
+        is LoginState.SignedOut -> TODO()
+        LoginState.SignedIn -> TODO()
+    }
+}

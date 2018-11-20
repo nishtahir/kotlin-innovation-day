@@ -5,6 +5,12 @@ val emptyList = emptyList<Int>() // internal object EmptyList : List<Nothing>
 
 
 myList.partition { }
+// takeif, takeinless, groupby
+// zipwithnext 1 & 2, 2& 3, etc.
+//asscoiateby
+
+//windowed
+//sequence
 
 
 list
